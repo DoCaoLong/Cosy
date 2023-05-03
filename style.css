@@ -57,6 +57,8 @@ body {
   font-family: "Nunito";
 }
 
+
+
 /* page login */
 .input-row-login {
   width: 100%;
@@ -164,17 +166,20 @@ body {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   display: flex;
   flex-direction: column;
 }
 
 .logo {
   padding-left: 10%;
-  width: 35%;
+  width: 30%;
 }
 
-.cookie {}
+.cookie {
+  width: 50%;
+  z-index: 1;
+}
 
 
 .logo img,
@@ -239,7 +244,8 @@ body {
 }
 
 .div-note-cosy {
-  width: 100%;
+  width: 50%;
+  padding-bottom: 10px;
 }
 
 .note-cosy {
@@ -294,10 +300,16 @@ body {
   gap: 20px;
 }
 
+/* .glass {
+  margin: 0 auto;
+  margin-top: 11px;
+  margin-bottom: 40px;
+  position: relative;
+} */
 .glass {
   margin: 0 auto;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 11px;
+  margin-bottom: 0px;
   position: relative;
 }
 
@@ -315,7 +327,7 @@ body {
 
 .input-row {
   width: 100%;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   margin-top: 16px;
 }
 
@@ -389,6 +401,12 @@ body {
   outline: none;
 }
 
+#btn-logout {
+  width: 50px;
+  display: none;
+  margin-left: 10%
+}
+
 @keyframes circleScale {
   0% {
     transform: scale(0.8);
@@ -414,5 +432,86 @@ body {
 
   100% {
     transform: scale(0.8);
+  }
+}
+
+@media (orientation: landscape) {
+  .container-cosy {
+    height: 100%;
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    padding-left: 5%;
+    width: 200px;
+  }
+
+  .fs-title {
+    font-size: 26px;
+    color: var(--yl2);
+    font-weight: bold;
+  }
+
+  #msform fieldset {
+    border: 0 none;
+    padding: 0px;
+    width: 60%;
+    width: 100%;
+    margin: 0 10%;
+    position: relative;
+  }
+
+  .glass {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .glass .a_glass {
+    max-width: 280px;
+    height: 100%;
+    animation: circleScale 3s forwards infinite;
+  }
+
+  .glass img {
+    display: inline-block;
+    object-fit: cover;
+  }
+
+  .cookie {
+    width: 300px;
+    z-index: 1;
+  }
+
+  .wraper {
+    background-image: url(./images/bg-step-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+
+  .container-cosy {
+    height: 100%;
+    display: flex;
+    position: fixed;
+    width: 100%;
+  }
+
+  .note-cosy {
+
+    width: 300px;
   }
 }

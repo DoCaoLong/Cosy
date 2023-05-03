@@ -13,6 +13,7 @@ const inputEles = document.querySelectorAll(".input-row");
 const wraperImg = document.querySelector(".wraper");
 const iconLogo = document.querySelector(".logo");
 const cookie = document.querySelector(".cookie");
+const btnLogout = document.querySelector("#btn-logout");
 
 const btnSuccess = document.querySelector(".btn-success");
 
@@ -27,12 +28,19 @@ $(function () {
     } else {
       noteCosy.style.display = "none";
     }
+    if (form_count === 2 || form_count === 3) {
+      if (window.innerHeight < window.innerWidth) {
+        wraperImg.style.height = "fit-content";
+      }
+    } else wraperImg.style.height = "100%";
 
     if (form_count === 4) {
+      btnLogout.style.display = "block";
       if (window.innerHeight < window.innerWidth) {
         wraperImg.style.backgroundImage =
           "url('./images/bg-final-landscape.png')";
         wraperImg.style.backgroundSize = "contain";
+        cookie.style.width = "400px";
       } else {
         wraperImg.style.backgroundImage = "url('./images/bg-final.png')";
         cookie.style.width = "140%";
@@ -144,6 +152,13 @@ $(function () {
       errorPassword.style.display = "none";
       console.log({ username: username.value, password: password.value });
       window.location.href = "index.html";
+    });
+  }
+
+  if (btnLogout) {
+    btnLogout.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Logout");
     });
   }
 

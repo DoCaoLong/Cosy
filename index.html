@@ -12,10 +12,7 @@
 </head>
 
 <body>
-  <div class="container-cosy" style="
-  height: 100%;
-  display: flex;
-">
+  <div class="container-cosy" >
     <div class="wraper">
       <div class="logo">
         <img src="./images/logo.png" alt="">
@@ -59,7 +56,9 @@
               <input id="email" class="input-cosy" type="text" name="email" placeholder="Email (*):" />
               <p class="error-text">Error</p>
             </div>
+            <div class="input-row">
             <input id="image" class="input-cosy" type="text" name="image" placeholder="Hình ảnh hóa đơn:" />
+            </div>
             <p class="warning-form">(*)Trường thông tin bắt buộc</p>
             <div class="wrap-btn">
               <button id="btn-register" class="next action-button "> Tiếp theo </button>
@@ -123,15 +122,18 @@
       <div class="btn-success">
         <button id="btn-completed" class="action-button"> Hoàn thành </button>
       </div>
-      <div id="bottom-end" style=" flex-direction: row; display: flex; "> 
+      <div id="bottom-end" style="justify-content: space-between; flex-direction: row; display: flex; "> 
         <div class="div-note-cosy">
           <p class="note-cosy"> 
             (*)Nguồn:Dựa trên dữ liệu được báo cáo bởi NielsenIQ về mặt thị phần sản lượng của ngành hàng Bánh quy cho thị trường Việt Nam (bao gồm kênh bán lẻ truyền thống, 
             kênh bán sỉ lẻ và kênh bán lẻ hiện đại) 
             trong vòng 24 tháng liên tục tính đến tháng 05/2022. 
             Bản quyền ©2022, Công ty NielsenIQ </p> 
+            <button id="btn-logout"> 
+              <img src="./images/ic-logout.png" alt=""> 
+            </button>
         </div>
-        <div class="cookie" style=" width: 100%;    z-index: 1; ">
+        <div class="cookie" >
            <img src="./images/banh.png" alt=""> 
         </div> 
       </div>
