@@ -49,8 +49,10 @@ $(function () {
       wraperImg.style.height = "auto";
       iconLogo.style.display = "none";
       btnSuccess.style.display = "flex";
-    } else {
+    } else if (form_count == 2) {
       wraperImg.style.backgroundImage = "url('./images/bg-main.png')";
+    } else {
+      wraperImg.style.backgroundImage = "url('./images/bg-step-1.png')";
     }
 
     if (animating) return false;

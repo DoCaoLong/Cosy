@@ -401,6 +401,20 @@ body {
   outline: none;
 }
 
+.firework {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 20px;
+}
+
+.firework-2 {
+  position: absolute;
+  right: 0;
+  left: -50px;
+  top: 0;
+}
+
 #btn-logout {
   width: 50px;
   display: none;
@@ -514,4 +528,6 @@ body {
 
     width: 300px;
   }
+
+
 }
