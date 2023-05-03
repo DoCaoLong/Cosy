@@ -80,7 +80,7 @@ $(function () {
           });
           next_fs.css({ left: left, opacity: opacity });
         },
-        duration: 800,
+        duration: 0,
         complete: function () {
           current_fs.hide();
           animating = false;
@@ -121,7 +121,7 @@ $(function () {
             opacity: opacity,
           });
         },
-        duration: 800,
+        duration: 0,
         complete: function () {
           current_fs.hide();
           animating = false;
