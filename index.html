@@ -55,8 +55,14 @@
               <input id="email" class="input-cosy" type="text" name="email" placeholder="Email (*):" />
               <p class="error-text">Error</p>
             </div>
-            <div class="input-row">
-            <input id="image" class="input-cosy" type="text" name="image" placeholder="Hình ảnh hóa đơn:" />
+            <div class="input-row" style="
+            display: flex;
+            flex-direction: row;
+            border-radius: 8px;
+            background-color: #fff;
+        ">
+              <input id="image" class="input-cosy" type="file" accept="image/*" name="image" placeholder="Hình ảnh hóa đơn:" />
+              <img class="ic-camera" src="./images/ic-camera.svg" alt="">
             </div>
             <p class="warning-form">(*)Trường thông tin bắt buộc</p>
             <div class="wrap-btn">
@@ -71,12 +77,12 @@
               <div class="firework">
               <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json" 
               background="transparent"  speed="1"  
-              style="width: 700px; height: 700px;" loop   autoplay></lottie-player>
+              style="width: 100%; height: 450px;" loop   autoplay></lottie-player>
             </div>
             <div class="firework-2">
               <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json" 
               background="transparent"  speed="1"  
-              style="width: 700px; height: 700px;" loop  autoplay></lottie-player>
+              style="width: 100%; height: 450px;" loop  autoplay></lottie-player>
             </div>
               <img class="a_glass" src="./images/coc-cosy.png" alt="">
             </div>
@@ -92,12 +98,12 @@
               <div class="firework">
                 <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json" 
                 background="transparent"  speed="1"  
-                style="width: 700px; height: 700px;" loop   autoplay></lottie-player>
+                style="width: 100%; height: 450px;" loop   autoplay></lottie-player>
               </div>
               <div class="firework-2">
                 <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json" 
                 background="transparent"  speed="1"  
-                style="width: 700px; height: 700px;" loop  autoplay></lottie-player>
+                style="width: 100%; height: 450px;" loop  autoplay></lottie-player>
               </div>
               <img class="a_glass" src="./images/coc-cosy.png" alt="">
             </div>
@@ -139,8 +145,15 @@
       <div class="btn-success">
         <button id="btn-completed" class="action-button"> Hoàn thành </button>
       </div>
-      <div id="bottom-end" style="justify-content: space-between; flex-direction: row; display: flex; "> 
-        <div class="div-note-cosy">
+      <div id="bottom-end" style="justify-content: space-between; flex-direction: row; display: flex; 
+      justify-content: space-between;flex-direction: row;display: flex;align-items: flex-end;"> 
+        <div class="div-note-cosy" style="
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        ">
           <p class="note-cosy"> 
             (*)Nguồn:Dựa trên dữ liệu được báo cáo bởi NielsenIQ về mặt thị phần sản lượng của ngành hàng Bánh quy cho thị trường Việt Nam (bao gồm kênh bán lẻ truyền thống, 
             kênh bán sỉ lẻ và kênh bán lẻ hiện đại) 
