@@ -1,7 +1,6 @@
-//jQuery time
 let current_fs, next_fs, previous_fs; //fieldsets
-let left, opacity, scale; //fieldset properties which we will animate
-let animating; //flag to prevent quick multi-click glitches
+let left, opacity, scale;
+let animating;
 var form_count = 1;
 const usernameEle = document.getElementById("name");
 const emailEle = document.getElementById("email");
@@ -16,16 +15,22 @@ const iconLogo = document.querySelector(".logo");
 const cookie = document.querySelector(".cookie");
 const containImage = document.querySelector(".container-cosy");
 const btnLogout = document.querySelector("#btn-logout");
-
 const btnSuccess = document.querySelector(".btn-success");
-
 const noteCosy = document.querySelector(".note-cosy");
 
 $(function () {
   function next(e) {
     e?.preventDefault();
+
+    if (form_count === 2) {
+      console.log("vào đây mấy lần");
+      const isValid = btnRegisterrr();
+      if (!isValid) return;
+    }
+    console.log("log");
     form_count++;
-    if (form_count === 2 || form_count === 4) {
+
+    if (form_count === 2 || form_count === 5) {
       noteCosy.style.display = "block";
     } else {
       noteCosy.style.display = "none";
@@ -35,7 +40,7 @@ $(function () {
         wraperImg.style.height = "fit-content";
       }
     } else wraperImg.style.height = "100%";
-    if (form_count === 4) {
+    if (form_count === 5) {
       if (window.innerHeight < window.innerWidth) {
         wraperImg.style.backgroundImage =
           "url('./images/bg-final-landscape.png')";
@@ -66,7 +71,9 @@ $(function () {
     if (animating) return false;
     animating = true;
     current_fs = $(this).parent().parent();
+    console.log("current_fs", current_fs);
     next_fs = $(this).parent().parent().next();
+    console.log("next_fs", next_fs);
 
     //show the next fieldset
     next_fs.show();
@@ -97,12 +104,12 @@ $(function () {
         easing: "easeInOutBack",
       }
     );
-    console.log("vo");
+    console.log("vo", form_count);
   }
 
   $(".next").click(next);
 
-  $(".previous").click(function (e) {
+  $(".previous").click((e) => {
     e.preventDefault();
     wraperImg.style.backgroundImage = "url('./images/bg-rectangle.jpeg')";
     if (animating) return false;
@@ -143,54 +150,29 @@ $(function () {
     );
   });
 
-  if (btnLogin) {
-    btnLogin.addEventListener("click", function (e) {
-      e.preventDefault();
-      let username = document.getElementById("username");
-      let password = document.getElementById("password");
-      const errorUsername = document.querySelector(
-        ".error-text-login-username"
-      );
-      const errorPassword = document.querySelector(
-        ".error-text-login-password"
-      );
-      if (username.value == "") {
-        errorUsername.style.display = "block";
-        return;
-      }
-      if (password.value == "") {
-        errorPassword.style.display = "block";
-        return;
-      }
-      errorUsername.style.display = "none";
-      errorPassword.style.display = "none";
-      console.log({ username: username.value, password: password.value });
-      window.location.href = "index.html";
-    });
-  }
-
-  if (btnLogout) {
-    btnLogout.addEventListener("click", function (e) {
-      e.preventDefault();
-      console.log("Logout");
-    });
-  }
-
   // validate form
-  if (btnRegister) {
-    btnRegister.addEventListener("click", function (e) {
-      e.preventDefault();
-      Array.from(inputEles).map((ele) =>
-        ele.classList.remove("success", "error")
-      );
-      let isValid = checkValidate();
-      if (!isValid) {
-        // handle submit
-        console.log(isValid);
-        next();
-      }
-    });
+  function btnRegisterrr() {
+    Array.from(inputEles).map((ele) =>
+      ele.classList.remove("success", "error")
+    );
+    let isValid = checkValidate();
+    return isValid;
   }
+
+  // if (btnRegister) {
+  //   btnRegister.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     Array.from(inputEles).map((ele) =>
+  //       ele.classList.remove("success", "error")
+  //     );
+  //     let isValid = checkValidate();
+  //     if (isValid && isValid !== undefined) {
+  //       // handle submit
+  //       next();
+  //       console.log(isValid);
+  //     }
+  //   });
+  // }
 
   function checkValidate() {
     let usernameValue = usernameEle.value;
@@ -266,12 +248,43 @@ $(function () {
   function isPhone(number) {
     return /(84|0[3|5|7|8|9])+([0-9]{8})\b/.test(number);
   }
-});
 
-// animation
+  // get the name of uploaded file
+  $('input[type="file"]').change(function () {
+    var value = $("input[type='file']").val();
+    $(".js-value").text(value);
+  });
 
-// get the name of uploaded file
-$('input[type="file"]').change(function () {
-  var value = $("input[type='file']").val();
-  $(".js-value").text(value);
+  if (btnLogin) {
+    btnLogin.addEventListener("click", function (e) {
+      e.preventDefault();
+      let username = document.getElementById("username");
+      let password = document.getElementById("password");
+      const errorUsername = document.querySelector(
+        ".error-text-login-username"
+      );
+      const errorPassword = document.querySelector(
+        ".error-text-login-password"
+      );
+      if (username.value == "") {
+        errorUsername.style.display = "block";
+        return;
+      }
+      if (password.value == "") {
+        errorPassword.style.display = "block";
+        return;
+      }
+      errorUsername.style.display = "none";
+      errorPassword.style.display = "none";
+      console.log({ username: username.value, password: password.value });
+      window.location.href = "index.html";
+    });
+  }
+
+  if (btnLogout) {
+    btnLogout.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Logout");
+    });
+  }
 });
