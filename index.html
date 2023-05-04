@@ -6,19 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-
   <link rel="stylesheet" href="./fonts/stylesheet.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <title>Cosy</title>
 </head>
 
 <body>
-  <div class="container-cosy" >
+  <div class="container-cosy">
     <div class="wraper">
       <div class="logo">
         <img src="./images/logo.png" alt="">
       </div>
-     
       <!-- MultiStep Form -->
       <div class="form-wraper" style="height: 100%;">
         <!-- multistep form -->
@@ -55,18 +53,21 @@
               <input id="email" class="input-cosy" type="text" name="email" placeholder="Email (*):" />
               <p class="error-text">Error</p>
             </div>
-            <div class="input-row" style="
+            <label for="image" class="file-upp input-row" style="
             display: flex;
             flex-direction: row;
             border-radius: 8px;
             background-color: #fff;
         ">
-              <input id="image" class="input-cosy" type="file" accept="image/*" name="image" placeholder="Hình ảnh hóa đơn:" />
+              <div class="input-cosy">
+                <span class="filupp-file-name js-value">No file choose</span>
+                <input id="image" type="file" accept="image/*" name="image" placeholder="Hình ảnh hóa đơn:" />
+              </div>
               <img class="ic-camera" src="./images/ic-camera.svg" alt="">
-            </div>
+            </label>
             <p class="warning-form">(*)Trường thông tin bắt buộc</p>
             <div class="wrap-btn">
-              <button id="btn-register" class="next action-button "> Tiếp theo </button>
+              <button id="btn-register" class="action-button "> Tiếp theo </button>
             </div>
           </fieldset>
           <!-- close step 2 -->
@@ -75,15 +76,13 @@
             <p class="fs-title"> Bạn đã đăng ký <br /> <span>Ly sứ phiên bản tên bạn</span> <br /> thành công!</p>
             <div class="glass">
               <div class="firework">
-              <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json" 
-              background="transparent"  speed="1"  
-              style="width: 100%; height: 450px;" loop   autoplay></lottie-player>
-            </div>
-            <div class="firework-2">
-              <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json" 
-              background="transparent"  speed="1"  
-              style="width: 100%; height: 450px;" loop  autoplay></lottie-player>
-            </div>
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json"
+                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
+              </div>
+              <div class="firework-2">
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json"
+                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
+              </div>
               <img class="a_glass" src="./images/coc-cosy.png" alt="">
             </div>
             <div class="wrap-btn">
@@ -96,14 +95,12 @@
             <p class="fs-title"> Vui lòng chờ ly của bạn <br /> trong ít phút nhé!!</p>
             <div class="glass">
               <div class="firework">
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json" 
-                background="transparent"  speed="1"  
-                style="width: 100%; height: 450px;" loop   autoplay></lottie-player>
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json"
+                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
               </div>
               <div class="firework-2">
-                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json" 
-                background="transparent"  speed="1"  
-                style="width: 100%; height: 450px;" loop  autoplay></lottie-player>
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json"
+                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
               </div>
               <img class="a_glass" src="./images/coc-cosy.png" alt="">
             </div>
@@ -111,17 +108,18 @@
             display: flex;
             align-items: center;
             justify-content: center;">
-            <p class="fs-title"> Số thứ tự của bạn là 
-            </p>
-            <span style="
+              <p class="fs-title"> Số thứ tự của bạn là </p>
+              <span style="
             font-size: 32px; font-weight: 700;">
-            <svg width="100" height="80">
-              <rect x="10" y="5" rx="10" ry="30" width="80" height="70" style="fill:#CE5300;stroke:white;stroke-width:5;">
-             </rect>
-             <text stroke-width="2" stroke="white" x="40" y="50" class="caption" fill="white" font-weight="bold">7</text>
-           </svg>
-          </span>
-          </div>
+                <svg width="100" height="80">
+                  <rect x="10" y="5" rx="10" ry="30" width="80" height="70"
+                    style="fill:#CE5300;stroke:white;stroke-width:5;">
+                  </rect>
+                  <text stroke-width="2" stroke="white" x="40" y="50" class="caption" fill="white"
+                    font-weight="bold">7</text>
+                </svg>
+              </span>
+            </div>
             <div class="wrap-btn">
               <button class="next action-button"> Tiếp theo </button>
             </div>
@@ -139,33 +137,23 @@
           <!-- close step final -->
         </form>
       </div>
-
       <!-- /.MultiStep Form -->
-
       <div class="btn-success">
         <button id="btn-completed" class="action-button"> Hoàn thành </button>
       </div>
       <div id="bottom-end" style="justify-content: space-between; flex-direction: row; display: flex; 
-      justify-content: space-between;flex-direction: row;display: flex;align-items: flex-end;"> 
-        <div class="div-note-cosy" style="
-        display: flex;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        ">
-          <p class="note-cosy"> 
-            (*)Nguồn:Dựa trên dữ liệu được báo cáo bởi NielsenIQ về mặt thị phần sản lượng của ngành hàng Bánh quy cho thị trường Việt Nam (bao gồm kênh bán lẻ truyền thống, 
-            kênh bán sỉ lẻ và kênh bán lẻ hiện đại) 
-            trong vòng 24 tháng liên tục tính đến tháng 05/2022. 
-            Bản quyền ©2022, Công ty NielsenIQ </p> 
-            <button id="btn-logout"> 
-              <img src="./images/ic-logout.png" alt=""> 
-            </button>
+      justify-content: space-between;flex-direction: row;display: flex;align-items: flex-end;">
+        <div class="div-note-cosy">
+          <p class="note-cosy"> (*)Nguồn:Dựa trên dữ liệu được báo cáo bởi NielsenIQ về mặt thị phần sản lượng của ngành
+            hàng Bánh quy cho thị trường Việt Nam (bao gồm kênh bán lẻ truyền thống, kênh bán sỉ lẻ và kênh bán lẻ hiện
+            đại) trong vòng 24 tháng liên tục tính đến tháng 05/2022. Bản quyền ©2022, Công ty NielsenIQ </p>
+          <button id="btn-logout">
+            <img src="./images/ic-logout.png" alt="">
+          </button>
         </div>
-        <div class="cookie" >
-           <img src="./images/banh.png" alt=""> 
-        </div> 
+        <div class="cookie">
+          <img src="./images/banh.png" alt="">
+        </div>
       </div>
     </div>
   </div>

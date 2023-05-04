@@ -7,6 +7,7 @@ const usernameEle = document.getElementById("name");
 const emailEle = document.getElementById("email");
 const phoneEle = document.getElementById("phone");
 const giftnameEle = document.getElementById("giftname");
+const fileEle = document.getElementById("image");
 const btnRegister = document.getElementById("btn-register");
 const btnLogin = document.getElementById("btn-login");
 const inputEles = document.querySelectorAll(".input-row");
@@ -21,8 +22,8 @@ const btnSuccess = document.querySelector(".btn-success");
 const noteCosy = document.querySelector(".note-cosy");
 
 $(function () {
-  $(".next").click(function (e) {
-    e.preventDefault();
+  function next(e) {
+    e?.preventDefault();
     form_count++;
     if (form_count === 2 || form_count === 4) {
       noteCosy.style.display = "block";
@@ -34,7 +35,6 @@ $(function () {
         wraperImg.style.height = "fit-content";
       }
     } else wraperImg.style.height = "100%";
-
     if (form_count === 4) {
       if (window.innerHeight < window.innerWidth) {
         wraperImg.style.backgroundImage =
@@ -97,7 +97,10 @@ $(function () {
         easing: "easeInOutBack",
       }
     );
-  });
+    console.log("vo");
+  }
+
+  $(".next").click(next);
 
   $(".previous").click(function (e) {
     e.preventDefault();
@@ -139,6 +142,7 @@ $(function () {
       }
     );
   });
+
   if (btnLogin) {
     btnLogin.addEventListener("click", function (e) {
       e.preventDefault();
@@ -180,10 +184,10 @@ $(function () {
         ele.classList.remove("success", "error")
       );
       let isValid = checkValidate();
-      if (isValid) {
+      if (!isValid) {
         // handle submit
         console.log(isValid);
-        alert("Gửi đăng ký thành công");
+        next();
       }
     });
   }
@@ -193,6 +197,7 @@ $(function () {
     let emailValue = emailEle.value;
     let phoneValue = phoneEle.value;
     let giftNameValue = phoneEle.value;
+    let fileValue = fileEle.value;
     let isCheck = true;
     form_count = 2;
 
@@ -236,11 +241,10 @@ $(function () {
         giftname: giftNameValue,
         phone: phoneValue,
         email: emailValue,
+        image: fileValue,
       };
       return values;
     }
-
-    // return isCheck;
   }
 
   function setSuccess(ele) {
@@ -265,3 +269,9 @@ $(function () {
 });
 
 // animation
+
+// get the name of uploaded file
+$('input[type="file"]').change(function () {
+  var value = $("input[type='file']").val();
+  $(".js-value").text(value);
+});

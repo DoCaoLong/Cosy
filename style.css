@@ -57,8 +57,6 @@ body {
   font-family: "Nunito";
 }
 
-
-
 /* page login */
 .input-row-login {
   width: 100%;
@@ -104,11 +102,13 @@ body {
 /*buttons*/
 
 #loginForm .action-button {
-  background: linear-gradient(90deg,
-      #e9bf38 0%,
-      #f9f18d 32%,
-      #d8a928 68%,
-      #f7f197 100%);
+  background: linear-gradient(
+    90deg,
+    #e9bf38 0%,
+    #f9f18d 32%,
+    #d8a928 68%,
+    #f7f197 100%
+  );
   font-weight: 400;
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -150,7 +150,6 @@ body {
   display: none;
 }
 
-
 .msg-error {
   font-size: 18px;
   color: var(--yl2);
@@ -159,14 +158,17 @@ body {
 }
 
 /* end page login */
-
+.form-wraper {
+  display: flex;
+  justify-content: center;
+}
 .wraper {
   background-image: url(./images/bg-step-1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  /* height: fit-content; */
+  /* height: 100dvh; */
   display: flex;
   flex-direction: column;
 }
@@ -181,7 +183,6 @@ body {
   z-index: 1;
 }
 
-
 .logo img,
 .cookie img {
   width: 100%;
@@ -192,6 +193,7 @@ body {
 /*form styles*/
 #msform {
   /* width: 400px; */
+  width: 100%;
   text-align: center;
   position: relative;
   display: flex;
@@ -218,7 +220,7 @@ body {
 }
 
 /*inputs*/
-#msform .input-cosy {
+.input-cosy {
   font-family: "Inter", sans-serif;
   padding: 12px 28px;
   border: 0 none;
@@ -228,6 +230,7 @@ body {
   font-size: 24px;
   background-color: #fff;
   cursor: pointer;
+  text-align: left;
 }
 
 .input-cosy::placeholder {
@@ -245,7 +248,13 @@ body {
 
 .div-note-cosy {
   width: 50%;
-  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 
 .note-cosy {
@@ -261,11 +270,13 @@ body {
 /*buttons*/
 
 #msform .action-button {
-  background: linear-gradient(90deg,
-      #e9bf38 0%,
-      #f9f18d 32%,
-      #d8a928 68%,
-      #f7f197 100%);
+  background: linear-gradient(
+    90deg,
+    #e9bf38 0%,
+    #f9f18d 32%,
+    #d8a928 68%,
+    #f7f197 100%
+  );
   font-weight: 400;
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -288,7 +299,7 @@ body {
   font-weight: bold;
 }
 
-.fs-title>span {
+.fs-title > span {
   text-transform: uppercase;
   color: #ffe375;
 }
@@ -323,7 +334,6 @@ body {
   display: inline-block;
   object-fit: cover;
 }
-
 
 .input-row {
   width: 100%;
@@ -386,7 +396,13 @@ body {
 .btn-success button {
   margin: 30px;
   border: 1px solid #1565ff !important;
-  background: linear-gradient(90deg, #aaedff 0%, #156cff 32%, #0051bf 68%, #1565ff 100%) !important;
+  background: linear-gradient(
+    90deg,
+    #aaedff 0%,
+    #156cff 32%,
+    #0051bf 68%,
+    #1565ff 100%
+  ) !important;
   color: #fff !important;
   font-weight: 400;
   font-size: 20px;
@@ -417,11 +433,11 @@ body {
 
 #btn-logout {
   width: 50px;
-  margin-left: 10%
+  margin-left: 10%;
 }
 
 .ic-camera {
-  padding-right: 5px;
+  padding-right: 20px;
 }
 
 @keyframes circleScale {
@@ -452,6 +468,27 @@ body {
   }
 }
 
+.file-upp > div > input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.filupp-file-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
 @media (orientation: landscape) {
   .container-cosy {
     height: 100%;
@@ -512,7 +549,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-
 }
 
 @media (orientation: portrait) {
@@ -528,9 +564,6 @@ body {
   }
 
   .note-cosy {
-
     width: 300px;
   }
-
-
 }
