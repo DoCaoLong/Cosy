@@ -417,8 +417,11 @@ body {
 
 #btn-logout {
   width: 50px;
-  display: none;
   margin-left: 10%
+}
+
+.ic-camera {
+  padding-right: 5px;
 }
 
 @keyframes circleScale {

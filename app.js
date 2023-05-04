@@ -13,6 +13,7 @@ const inputEles = document.querySelectorAll(".input-row");
 const wraperImg = document.querySelector(".wraper");
 const iconLogo = document.querySelector(".logo");
 const cookie = document.querySelector(".cookie");
+const containImage = document.querySelector(".container-cosy");
 const btnLogout = document.querySelector("#btn-logout");
 
 const btnSuccess = document.querySelector(".btn-success");
@@ -35,7 +36,6 @@ $(function () {
     } else wraperImg.style.height = "100%";
 
     if (form_count === 4) {
-      btnLogout.style.display = "block";
       if (window.innerHeight < window.innerWidth) {
         wraperImg.style.backgroundImage =
           "url('./images/bg-final-landscape.png')";
@@ -51,8 +51,16 @@ $(function () {
       btnSuccess.style.display = "flex";
     } else if (form_count == 2) {
       wraperImg.style.backgroundImage = "url('./images/bg-main.png')";
+      if (window.innerHeight > window.innerWidth) {
+        containImage.style.position = "relative";
+        containImage.style.height = "auto";
+      }
     } else {
       wraperImg.style.backgroundImage = "url('./images/bg-step-1.png')";
+      if (window.innerHeight > window.innerWidth) {
+        containImage.style.position = "fixed";
+        containImage.style.height = "100%";
+      }
     }
 
     if (animating) return false;
