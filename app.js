@@ -39,7 +39,9 @@ $(function () {
       if (window.innerHeight < window.innerWidth) {
         wraperImg.style.height = "fit-content";
       }
-    } else wraperImg.style.height = "100%";
+    } else {
+      // wraperImg.style.height = "100%";
+    }
     if (form_count === 5) {
       if (window.innerHeight < window.innerWidth) {
         wraperImg.style.backgroundImage =

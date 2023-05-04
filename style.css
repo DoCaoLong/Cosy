@@ -102,13 +102,11 @@ body {
 /*buttons*/
 
 #loginForm .action-button {
-  background: linear-gradient(
-    90deg,
-    #e9bf38 0%,
-    #f9f18d 32%,
-    #d8a928 68%,
-    #f7f197 100%
-  );
+  background: linear-gradient(90deg,
+      #e9bf38 0%,
+      #f9f18d 32%,
+      #d8a928 68%,
+      #f7f197 100%);
   font-weight: 400;
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -162,6 +160,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .wraper {
   background-image: url(./images/bg-step-1.png);
   background-repeat: no-repeat;
@@ -253,8 +252,8 @@ body {
   align-content: flex-start;
   flex-direction: column;
   justify-content: center;
-  gap: 32px;
-  margin-bottom: 48px;
+  gap: 5px;
+  margin-bottom: 20px;
 }
 
 .note-cosy {
@@ -270,13 +269,11 @@ body {
 /*buttons*/
 
 #msform .action-button {
-  background: linear-gradient(
-    90deg,
-    #e9bf38 0%,
-    #f9f18d 32%,
-    #d8a928 68%,
-    #f7f197 100%
-  );
+  background: linear-gradient(90deg,
+      #e9bf38 0%,
+      #f9f18d 32%,
+      #d8a928 68%,
+      #f7f197 100%);
   font-weight: 400;
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -299,7 +296,7 @@ body {
   font-weight: bold;
 }
 
-.fs-title > span {
+.fs-title>span {
   text-transform: uppercase;
   color: #ffe375;
 }
@@ -396,13 +393,11 @@ body {
 .btn-success button {
   margin: 30px;
   border: 1px solid #1565ff !important;
-  background: linear-gradient(
-    90deg,
-    #aaedff 0%,
-    #156cff 32%,
-    #0051bf 68%,
-    #1565ff 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      #aaedff 0%,
+      #156cff 32%,
+      #0051bf 68%,
+      #1565ff 100%) !important;
   color: #fff !important;
   font-weight: 400;
   font-size: 20px;
@@ -468,7 +463,7 @@ body {
   }
 }
 
-.file-upp > div > input[type="file"] {
+.file-upp>div>input[type="file"] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -478,6 +473,7 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
 .filupp-file-name {
   max-width: 100%;
   overflow: hidden;
@@ -489,6 +485,7 @@ body {
   text-overflow: ellipsis;
   word-break: break-word;
 }
+
 @media (orientation: landscape) {
   .container-cosy {
     height: 100%;
