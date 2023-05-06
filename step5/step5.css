@@ -127,3 +127,14 @@
   font-weight: bold;
   font-family: 'UTM Avo';
 }
+
+.name-customer {
+  font-family: 'iCiel Cadena';
+  font-size: 40px;
+  color: var(--red);
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-3%, 105%) rotate(-10deg);
+}

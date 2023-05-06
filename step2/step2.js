@@ -28,7 +28,7 @@ if (btnRegister) {
     let isValid = checkValidate();
     if (isValid && isValid !== undefined) {
       // handle submit
-      var baseUrl = "http://127.0.0.1:5500/step3/step3.html?value=";
+      var baseUrl = "../step3/step3.html?value=";
       var url = baseUrl + encodeURIComponent(isValid.giftname);
       window.location.href = url;
       console.log(isValid);
