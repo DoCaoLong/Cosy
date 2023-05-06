@@ -177,7 +177,8 @@ body {
 }
 
 .input-row.error .input-cosy::placeholder {
-  color: var(--red);
+  color: #ACACAC;
+  font-size: 22px;
 }
 
 /* close input */

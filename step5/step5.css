@@ -92,6 +92,7 @@
 
 .image-center img {
   object-fit: contain;
+  width: 303px;
 }
 
 .firework {
@@ -137,4 +138,23 @@
   left: 50%;
   bottom: 50%;
   transform: translate(-3%, 105%) rotate(-10deg);
+}
+
+.animated {
+  animation: circleScale 2s forwards infinite;
+}
+
+@keyframes circleScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

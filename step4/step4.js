@@ -19,22 +19,22 @@ $(function () {
 
   elmName.innerText = name;
   if (name.length <= 1) {
-    elmName.style.transform = "translate(130%, 194%) rotate(-3deg)";
+    elmName.style.transform = "translate(130%, 80%) rotate(-3deg)";
     return;
   }
   if (name.length <= 2) {
     elmName.style.fontSize = "40px";
-    elmName.style.transform = "translate(40%, 194%) rotate(-3deg)";
+    elmName.style.transform = "translate(40%, 80%) rotate(-3deg)";
     return;
   }
   if (name.length <= 4) {
     console.log("VÀO nè");
-    elmName.style.transform = "translate(3%, 255%) rotate(-6deg)";
+    elmName.style.transform = "translate(3%, 100%) rotate(-6deg)";
     elmName.style.fontSize = "30px";
     return;
   }
   if (name.length <= 6) {
-    elmName.style.transform = "translate(-5%, 368%) rotate(-6deg)";
+    elmName.style.transform = "translate(-5%, 150%) rotate(-6deg)";
     elmName.style.fontSize = "20px";
     return;
   }

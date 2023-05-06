@@ -23,20 +23,20 @@ $(function () {
 
   elmName.innerText = name;
   if (name.length <= 1) {
-    elmName.style.transform = "translate(130%, 160%) rotate(-3deg)";
+    elmName.style.transform = "translate(130%, 80%) rotate(-3deg)";
     return;
   }
   if (name.length <= 2) {
-    elmName.style.transform = "translate(40%, 160%) rotate(-3deg)";
+    elmName.style.transform = "translate(40%, 80%) rotate(-3deg)";
     return;
   }
   if (name.length <= 4) {
-    elmName.style.transform = "translate(3%, 211%) rotate(-6deg)";
+    elmName.style.transform = "translate(3%, 105%) rotate(-6deg)";
     elmName.style.fontSize = "30px";
     return;
   }
   if (name.length <= 6) {
-    elmName.style.transform = "translate(0%, 298%) rotate(-6deg)";
+    elmName.style.transform = "translate(0%, 148%) rotate(-6deg)";
     elmName.style.fontSize = "20px";
     return;
   }

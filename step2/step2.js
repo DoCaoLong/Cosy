@@ -54,8 +54,8 @@ function checkValidate() {
   if (giftNameValue == "") {
     setError(giftnameEle, "Tên quà tặng không được để trống");
     isCheck = false;
-  } else if (giftNameValue.length > 8) {
-    setError(giftnameEle, "Tên hiển thị giới hạn 8 chữ cái");
+  } else if (giftNameValue.length > 5) {
+    setError(giftnameEle, "Tên hiển thị giới hạn 6 chữ cái");
     isCheck = false;
   } else {
     setSuccess(giftnameEle);
