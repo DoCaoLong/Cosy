@@ -176,9 +176,21 @@ body {
   display: block;
 }
 
+
 .input-row.error .input-cosy::placeholder {
   color: #ACACAC;
   font-size: 22px;
 }
 
+.input-cosy.name-gift-place::placeholder {
+  color: var(--red) !important;
+  font-family: "iCiel Cadena";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+
 /* close input */
+
+/* input name gift */

@@ -21,7 +21,7 @@ $(function () {
     });
   }
 
-  elmName.innerText = name;
+  elmName.innerText = name?.toUpperCase();
   if (name.length <= 1) {
     elmName.style.transform = "translate(130%, 80%) rotate(-3deg)";
     return;
@@ -32,7 +32,7 @@ $(function () {
   }
   if (name.length <= 4) {
     elmName.style.transform = "translate(3%, 105%) rotate(-6deg)";
-    elmName.style.fontSize = "30px";
+    elmName.style.fontSize = "28px";
     return;
   }
   if (name.length <= 6) {

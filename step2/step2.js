@@ -53,10 +53,17 @@ function checkValidate() {
 
   if (giftNameValue == "") {
     setError(giftnameEle, "Tên quà tặng không được để trống");
+
+    giftnameEle.classList.remove("name-gift-place");
     isCheck = false;
-  } else if (giftNameValue.length > 5) {
+  } else if (giftNameValue.length > 6) {
+    giftnameEle.value = "";
     setError(giftnameEle, "Tên hiển thị giới hạn 6 chữ cái");
+    giftnameEle.classList.add("name-gift-place");
     isCheck = false;
+  } else if (textName(giftNameValue)) {
+    giftnameEle.value = "";
+    setError(giftnameEle, "Không được phép nhập ký tự đặc biệt");
   } else {
     setSuccess(giftnameEle);
   }
@@ -65,6 +72,7 @@ function checkValidate() {
     setError(emailEle, "Email không được để trống");
     isCheck = false;
   } else if (!isEmail(emailValue)) {
+    emailEle.value = "";
     setError(emailEle, "Email không đúng định dạng");
     isCheck = false;
   } else {
@@ -75,6 +83,7 @@ function checkValidate() {
     setError(phoneEle, "Số điện thoại không được để trống");
     isCheck = false;
   } else if (!isPhone(phoneValue)) {
+    phoneEle.value = "";
     setError(phoneEle, "Số điện thoại không đúng định dạng");
     isCheck = false;
   } else {
@@ -111,4 +120,8 @@ function isEmail(email) {
 
 function isPhone(number) {
   return /(84|0[3|5|7|8|9])+([0-9]{8})\b/.test(number);
+}
+
+function textName(name) {
+  return /([!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])|\s/.test(name);
 }
