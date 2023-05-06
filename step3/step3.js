@@ -31,13 +31,13 @@ $(function () {
     return;
   }
   if (name.length <= 4) {
-    elmName.style.transform = "translate(6%, 109%) rotate(-6deg)";
-    elmName.style.fontSize = "28px";
+    elmName.style.transform = "translate(10%, 117%) rotate(-6deg)";
+    elmName.style.fontSize = "26px";
     return;
   }
   if (name.length <= 6) {
-    elmName.style.transform = "translate(0%, 148%) rotate(-6deg)";
-    elmName.style.fontSize = "20px";
+    elmName.style.transform = "translate(-5%, 145%) rotate(-6deg)";
+    elmName.style.fontSize = "22px";
     return;
   }
 });

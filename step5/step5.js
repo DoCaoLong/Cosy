@@ -24,13 +24,13 @@ $(function () {
     return;
   }
   if (name.length <= 4) {
-    elmName.style.transform = "translate(0%, 125%) rotate(-6deg)";
-    elmName.style.fontSize = "30px";
+    elmName.style.transform = "translate(13%, 137%) rotate(-6deg)";
+    elmName.style.fontSize = "26px";
     return;
   }
   if (name.length <= 6) {
-    elmName.style.transform = "translate(0%, 170%) rotate(-6deg)";
-    elmName.style.fontSize = "20px";
+    elmName.style.transform = "translate(-6%, 167%) rotate(-7deg)";
+    elmName.style.fontSize = "22px";
     return;
   }
 });

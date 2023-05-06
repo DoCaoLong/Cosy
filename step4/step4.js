@@ -28,13 +28,13 @@ $(function () {
     return;
   }
   if (name.length <= 4) {
-    elmName.style.transform = "translate(1%, 105%) rotate(-6deg)";
-    elmName.style.fontSize = "30px";
+    elmName.style.transform = "translate(11%, 120%) rotate(-6deg)";
+    elmName.style.fontSize = "26px";
     return;
   }
   if (name.length <= 6) {
-    elmName.style.transform = "translate(-5%, 150%) rotate(-6deg)";
-    elmName.style.fontSize = "20px";
+    elmName.style.transform = "translate(-5%, 147%) rotate(-7deg)";
+    elmName.style.fontSize = "22px";
     return;
   }
 });
