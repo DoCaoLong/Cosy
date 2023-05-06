@@ -28,7 +28,7 @@ $(function () {
     return;
   }
   if (name.length <= 4) {
-    elmName.style.transform = "translate(0%, 100%) rotate(-6deg)";
+    elmName.style.transform = "translate(1%, 105%) rotate(-6deg)";
     elmName.style.fontSize = "30px";
     return;
   }
