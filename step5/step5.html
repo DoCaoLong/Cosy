@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../global.css">
-  <link rel="stylesheet" href="../step1/step1.css">
+  <link rel="stylesheet" href="../step5/step5.css">
   <link rel="stylesheet" href="../fonts/stylesheet.css">
   <title>Wellcome</title>
 </head>
@@ -15,21 +15,56 @@
   <div class="container-cosy">
     <div class="wraper bg-step1">
       <!-- number1 -->
-      <div class="number1">
-        <img src="" alt="">
+      <div class="cup-image">
+        <div class="content-header">
+          <p class="title">Vui lòng chờ ly của bạn</p>
+          <p class="title">trong ít phút nhé!!</p>
+        </div>
+        <div class="image-center">
+
+          <div class="firework">
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json" background="transparent"
+              speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
+          </div>
+          <img src="../images/news/cup.png" alt="">
+          <div class="firework-2">
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json" background="transparent"
+              speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+            ">
+          <p class="number-title"> Số thứ tự nhận quà của bạn là: </p>
+          <span style="
+            font-size: 32px; font-weight: 700;     display: flex;   position: relative;">
+            <svg width="90" height="70">
+              <rect x="10" y="5" rx="10" ry="30" width="70" height="60"
+                style="fill:#CE5300;stroke:white;stroke-width:5;">
+              </rect>
+              <!-- <text stroke-width="2" stroke="white" x="35" y="45" class="caption" fill="white"
+                font-weight="bold">17</text> -->
+            </svg>
+            <p class="number-count">99</p>
+          </span>
+        </div>
+        <div class="wrap-btn">
+          <div class="button-right">
+            <button class="btn"> TIẾP THEO </button>
+          </div>
+        </div>
       </div>
       <!-- close number 1 -->
-      <!-- btn Logout -->
-      <div onclick="alerts()" class="btn-logout">
-      </div>
-      <!-- close btn loggout -->
     </div>
   </div>
-  <script>
-    function alerts() {
-      alert("Logout")
-    }
-  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="./step5.js"></script>
 </body>
 
 </html>
