@@ -58,55 +58,19 @@ body {
 }
 
 /* page login */
-.input-row-login {
-  width: 100%;
-  margin-bottom: 30px;
-  margin-top: 40px;
-}
-
-.wraper-login {
-  background-image: url("./images/bg-main.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
 
 /*loginForm styles*/
-#loginForm {
-  width: 100%;
-  text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#loginForm fieldset {
-  border: 0 none;
-  padding: 20px 30px;
-  width: 60%;
-  width: 100%;
-  margin: 0 10%;
-  position: relative;
-}
-
-#loginForm fieldset:nth-child(2) {
-  padding: 0 20%;
-  margin-bottom: 24px;
-}
 
 /*buttons*/
 
 #loginForm .action-button {
-  background: linear-gradient(90deg,
-      #e9bf38 0%,
-      #f9f18d 32%,
-      #d8a928 68%,
-      #f7f197 100%);
+  background: linear-gradient(
+    90deg,
+    #e9bf38 0%,
+    #f9f18d 32%,
+    #d8a928 68%,
+    #f7f197 100%
+  );
   font-weight: 400;
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -125,40 +89,6 @@ body {
 /*Hide all except first fieldset*/
 #loginForm fieldset:not(:first-of-type) {
   display: none;
-}
-
-/*inputs*/
-#loginForm .input-cosy {
-  font-family: "Inter", sans-serif;
-  padding: 12px 28px;
-  border: 0 none;
-  border-radius: 8px;
-  width: 100%;
-  color: var(--yl1);
-  font-size: 24px;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.error-text-login-username {
-  display: none;
-}
-
-.error-text-login-password {
-  display: none;
-}
-
-.msg-error {
-  font-size: 18px;
-  color: var(--yl2);
-  margin: 8px 28px;
-  text-align: left;
-}
-
-/* end page login */
-.form-wraper {
-  display: flex;
-  justify-content: center;
 }
 
 .wraper {
@@ -268,12 +198,14 @@ body {
 
 /*buttons*/
 
-#msform .action-button {
-  background: linear-gradient(90deg,
-      #e9bf38 0%,
-      #f9f18d 32%,
-      #d8a928 68%,
-      #f7f197 100%);
+.action-button {
+  background: linear-gradient(
+    90deg,
+    #e9bf38 0%,
+    #f9f18d 32%,
+    #d8a928 68%,
+    #f7f197 100%
+  );
   font-weight: 400;
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -290,13 +222,8 @@ body {
 }
 
 /*headings*/
-.fs-title {
-  font-size: 32px;
-  color: var(--yl2);
-  font-weight: bold;
-}
 
-.fs-title>span {
+.fs-title > span {
   text-transform: uppercase;
   color: #ffe375;
 }
@@ -330,12 +257,6 @@ body {
 .glass img {
   display: inline-block;
   object-fit: cover;
-}
-
-.input-row {
-  width: 100%;
-  /* margin-bottom: 16px; */
-  margin-top: 16px;
 }
 
 .error-text {
@@ -393,11 +314,13 @@ body {
 .btn-success button {
   margin: 30px;
   border: 1px solid #1565ff !important;
-  background: linear-gradient(90deg,
-      #aaedff 0%,
-      #156cff 32%,
-      #0051bf 68%,
-      #1565ff 100%) !important;
+  background: linear-gradient(
+    90deg,
+    #aaedff 0%,
+    #156cff 32%,
+    #0051bf 68%,
+    #1565ff 100%
+  ) !important;
   color: #fff !important;
   font-weight: 400;
   font-size: 20px;
@@ -461,29 +384,6 @@ body {
   100% {
     transform: scale(0.8);
   }
-}
-
-.file-upp>div>input[type="file"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.filupp-file-name {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
 }
 
 @media (orientation: landscape) {

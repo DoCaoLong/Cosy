@@ -10,41 +10,6 @@
   align-items: center;
   justify-content: center;
 }
-
-/* .form-wraper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-} */
-.fs-title {
-  font-family: "iCiel Cadena";
-  font-size: 32px;
-  color: var(--yl1);
-  font-weight: bold;
-}
-
-.fs-title > span {
-  text-transform: uppercase;
-  color: #ffe375;
-}
-
-/* input */
-.input-cosy {
-  font-family: "iCiel Cadena";
-  padding: 12px 28px;
-  border: 0 none;
-  border-radius: 8px;
-  width: 100%;
-  color: var(--yl1);
-  font-size: 24px;
-  background-color: #fff;
-  cursor: pointer;
-  text-align: left;
-}
-
-.input-cosy::placeholder {
-  color: var(--yl1);
-  font-family: "iCiel Cadena";
-  font-size: 24px;
-  font-weight: 300;
+#form-login {
+  width: 60%;
 }

@@ -6,30 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../global.css">
-  <link rel="stylesheet" href="../step1/step1.css">
+  <link rel="stylesheet" href="../step2/step2.css">
   <link rel="stylesheet" href="../fonts/stylesheet.css">
-  <title>Wellcome</title>
+  <title>Step 2</title>
 </head>
 
 <body>
   <div class="container-cosy">
-    <div class="wraper bg-step1">
-      <!-- number1 -->
-      <div class="number1">
-        <img src="" alt="">
-      </div>
-      <!-- close number 1 -->
-      <!-- btn Logout -->
-      <div onclick="alerts()" class="btn-logout">
-      </div>
-      <!-- close btn loggout -->
+    <div class="wraper bg-step2">
+      <form id="form-info">
+        <p class="fs-title">Thông tin khách hàng</p>
+        <div class="input-row">
+          <input id="name" class="input-cosy" type="text" name="name" placeholder="Họ và Tên KH (*):" />
+        </div>
+        <div class="input-row error">
+          <input id="giftname" class="input-cosy " type="text" name="giftname"
+            placeholder="Tên hiển thị trên quà tặng (*):" />
+          <p class="error-text">Tên hiển thị giới hạn 8 chữ cái</p>
+        </div>
+        <div class="input-row">
+          <input id="phone" class="input-cosy" type="text" name="phone" placeholder="Số điện thoại (*):" />
+        </div>
+        <div class="input-row">
+          <input id="email" class="input-cosy" type="text" name="email" placeholder="Email (*):" />
+        </div>
+        <label for="image" class="file-upp input-row" style="
+                display: flex;
+                flex-direction: row;
+                border-radius: 8px;
+                background-color: #fff;
+            ">
+          <div class="input-cosy">
+            <span class="filupp-file-name js-value">Hình ảnh hóa đơn:</span>
+            <input id="image" type="file" accept="image/*" name="image" placeholder="Hình ảnh hóa đơn:" />
+          </div>
+          <img class="ic-camera" src="../images/ic-camera.svg" alt="">
+        </label>
+        <p class="warning-form">(*)Trường thông tin bắt buộc</p>
+        <div class="wrap-btn">
+          <button id="btn-register" class="action-button"> Tiếp theo </button>
+        </div>
+      </form>
     </div>
   </div>
-  <script>
-    function alerts() {
-      alert("Logout")
-    }
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./step2.js"></script>
 </body>
 
 </html>

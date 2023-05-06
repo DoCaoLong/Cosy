@@ -17,3 +17,32 @@
   bottom: 25px;
   left: 54px;
 }
+.number1 {
+  position: absolute;
+  right: 5%;
+  top: 19%;
+  animation: circleScale 2s forwards infinite;
+}
+
+@keyframes circleScale {
+  0% {
+    /* transform: scale(1); */
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+  }
+
+  50% {
+    /* transform: scale(1.1); */
+    filter: brightness(130%);
+    -webkit-filter: brightness(130%);
+    -moz-filter: brightness(130%);
+  }
+
+  100% {
+    /* transform: scale(1); */
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+  }
+}

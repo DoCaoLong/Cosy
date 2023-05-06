@@ -5,163 +5,87 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./login.css">
   <link rel="stylesheet" href="./fonts/stylesheet.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <title>Cosy</title>
 </head>
 
 <body>
   <div class="container-cosy">
-    <div class="wraper">
-      <div class="logo">
-        <img src="./images/logo.png" alt="">
-      </div>
-      <!-- MultiStep Form -->
-      <div class="form-wraper" style="height: 100%;">
-        <!-- multistep form -->
-        <form id="msform">
-          <!-- step 1 -->
-          <fieldset>
-            <p class="fs-title"> Cùng xem lại <br /> <span>Ly sứ phiên bản tên bạn</span> nhé</p>
-            <div class="glass">
-              <img class="a_glass " src="./images/coc-cosy.png" alt="">
-            </div>
-            <div class="wrap-btn">
-              <button class="previous action-button">Quay lại</button>
-              <button class="next action-button"> Nhận quà ngay </button>
-            </div>
-          </fieldset>
-          <!-- close step 1 -->
-          <!-- step 2 -->
-          <fieldset>
-            <p class="fs-title">Thông tin khách hàng</p>
-            <div class="input-row">
-              <input id="name" class="input-cosy" type="text" name="name" placeholder="Họ và Tên KH (*):" />
-              <p class="error-text">Error</p>
-            </div>
-            <div class="input-row">
-              <input id="giftname" class="input-cosy" type="text" name="giftname"
-                placeholder="Tên hiển thị trên quà tặng (*):" />
-              <p class="error-text">Error</p>
-            </div>
-            <div class="input-row">
-              <input id="phone" class="input-cosy" type="text" name="phone" placeholder="Số điện thoại (*):" />
-              <p class="error-text">Error</p>
-            </div>
-            <div class="input-row">
-              <input id="email" class="input-cosy" type="text" name="email" placeholder="Email (*):" />
-              <p class="error-text">Error</p>
-            </div>
-            <label for="image" class="file-upp input-row" style="
-            display: flex;
-            flex-direction: row;
-            border-radius: 8px;
-            background-color: #fff;
-        ">
-              <div class="input-cosy">
-                <span class="filupp-file-name js-value">No file choose</span>
-                <input id="image" type="file" accept="image/*" name="image" placeholder="Hình ảnh hóa đơn:" />
-              </div>
-              <img class="ic-camera" src="./images/ic-camera.svg" alt="">
-            </label>
-            <p class="warning-form">(*)Trường thông tin bắt buộc</p>
-            <div class="wrap-btn">
-              <button id="btn-register" class="action-button next"> Tiếp theo </button>
-            </div>
-          </fieldset>
-          <!-- close step 2 -->
-          <!-- step 3 -->
-          <fieldset>
-            <p class="fs-title"> Bạn đã đăng ký <br /> <span>Ly sứ phiên bản tên bạn</span> <br /> thành công!</p>
-            <div class="glass">
-              <div class="firework">
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json"
-                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
-              </div>
-              <div class="firework-2">
-                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json"
-                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
-              </div>
-              <img class="a_glass" src="./images/coc-cosy.png" alt="">
-            </div>
-            <div class="wrap-btn">
-              <button class="next action-button"> Tiếp theo </button>
-            </div>
-          </fieldset>
-          <!-- close step 3 -->
-          <!-- step 4 -->
-          <fieldset>
-            <p class="fs-title"> Vui lòng chờ ly của bạn <br /> trong ít phút nhé!!</p>
-            <div class="glass">
-              <div class="firework">
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vXUtMkIcnZ.json"
-                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
-              </div>
-              <div class="firework-2">
-                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_fFjb9vxxFo.json"
-                  background="transparent" speed="1" style="width: 100%; height: 450px;" loop autoplay></lottie-player>
-              </div>
-              <img class="a_glass" src="./images/coc-cosy.png" alt="">
-            </div>
-            <div style="
-            display: flex;
-            align-items: center;
-            justify-content: center;">
-              <p class="fs-title"> Số thứ tự của bạn là </p>
-              <span style="
-            font-size: 32px; font-weight: 700;">
-                <svg width="100" height="80">
-                  <rect x="10" y="5" rx="10" ry="30" width="80" height="70"
-                    style="fill:#CE5300;stroke:white;stroke-width:5;">
-                  </rect>
-                  <text stroke-width="2" stroke="white" x="40" y="50" class="caption" fill="white"
-                    font-weight="bold">7</text>
-                </svg>
-              </span>
-            </div>
-            <div class="wrap-btn">
-              <button class="next action-button"> Tiếp theo </button>
-            </div>
-          </fieldset>
-          <!-- close step 4 -->
-          <!-- step final -->
-          <fieldset>
-            <!-- <div class="cookie_wrap">
-              <img src="./images/bg-succes1.png" alt="">
-            </div> -->
-            <!-- <div class="btn-success">
-              <button id="btn-completed" class="action-button"> Hoàn thành </button>
-            </div> -->
-          </fieldset>
-          <!-- close step final -->
-        </form>
-      </div>
-      <!-- /.MultiStep Form -->
-      <div class="btn-success">
-        <button id="btn-completed" class="action-button"> Hoàn thành </button>
-      </div>
-      <div id="bottom-end" style="justify-content: space-between; flex-direction: row; display: flex; 
-      justify-content: space-between;flex-direction: row;display: flex;align-items: flex-end;">
-        <div class="div-note-cosy">
-          <p class="note-cosy"> (*)Nguồn:Dựa trên dữ liệu được báo cáo bởi NielsenIQ về mặt thị phần sản lượng của ngành
-            hàng Bánh quy cho thị trường Việt Nam (bao gồm kênh bán lẻ truyền thống, kênh bán sỉ lẻ và kênh bán lẻ hiện
-            đại) trong vòng 24 tháng liên tục tính đến tháng 05/2022. Bản quyền ©2022, Công ty NielsenIQ </p>
-          <button id="btn-logout">
-            <img src="./images/ic-logout.png" alt="">
-          </button>
+    <div class="wraper-login">
+      <form id="form-login">
+        <p class="fs-title">Thông tin đăng nhập</p>
+        <div class="input-row">
+          <input id="username" class="input-cosy " type="text" name="username" placeholder="Tài khoản (*):" />
+          <p class="error-text">error</p>
         </div>
-        <div class="cookie">
-          <img src="./images/banh.png" alt="">
+        <div class="input-row">
+          <input id="password" class="input-cosy " type="text" name="password" placeholder="Mật khẩu (*):" />
+          <p class="error-text">error</p>
         </div>
-      </div>
+        <div class="wrap-btn pt-36px">
+          <button onclick="login()" type="button" id="btn-login" class="action-button"> Đăng nhập </button>
+        </div>
+      </form>
     </div>
   </div>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="./app.js"></script>
+  <script>
+    const inputEles = document.querySelectorAll(".input-row");
+    const usernameEle = document.getElementById("username");
+    const passwordEle = document.getElementById("password");
+
+    function login() {
+      Array.from(inputEles).map((ele) =>
+        ele.classList.remove("success", "error")
+      );
+      let isValid = checkValidate();
+      // handle submit
+      if (isValid) {
+        console.log(isValid)
+        window.location.pathname = "step1/step1.html"
+      }
+      return isValid;
+    }
+    function checkValidate() {
+      let usernameValue = usernameEle.value;
+      let passwordValue = passwordEle.value;
+      let isCheck = true;
+
+      if (usernameValue == "") {
+        setError(usernameEle, "Tên tài khoản không được để trống");
+        isCheck = false;
+      } else {
+        setSuccess(usernameEle);
+      }
+
+      if (passwordValue == "") {
+        setError(passwordEle, "Mật khẩu không được để trống");
+        isCheck = false;
+      } else {
+        setSuccess(passwordEle);
+      }
+
+      if (isCheck) {
+        let values = {
+          username: usernameValue,
+          password: passwordValue,
+        };
+        return values;
+      }
+    }
+
+    function setSuccess(ele) {
+      ele.parentNode.classList.add("success");
+    }
+
+    function setError(ele, message) {
+      let parentEle = ele.parentNode;
+      parentEle.classList.add("error");
+      parentEle.querySelector("p").innerText = message;
+    }
+
+  </script>
 </body>
 
 </html>

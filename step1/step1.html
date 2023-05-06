@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="../step1/step1.css">
   <link rel="stylesheet" href="../fonts/stylesheet.css">
-  <title>Wellcome</title>
+  <title>Step 1</title>
 </head>
 
 <body>
@@ -16,18 +16,24 @@
     <div class="wraper bg-step1">
       <!-- number1 -->
       <div class="number1">
-        <img src="" alt="">
+        <img src="../images/cooki.png" alt="">
       </div>
       <!-- close number 1 -->
+      <!-- btn start -->
+      <button onclick="nextStep2()" class="btn-blue position-start">Bắt đầu</button>
+      <!-- btn start -->
       <!-- btn Logout -->
-      <div onclick="alerts()" class="btn-logout">
-      </div>
+      <button onclick="alerts()" class="btn-logout">
+      </button>
       <!-- close btn loggout -->
     </div>
   </div>
   <script>
     function alerts() {
       alert("Logout")
+    }
+    function nextStep2() {
+      window.location.pathname = "step2/step2.html"
     }
   </script>
 </body>

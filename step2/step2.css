@@ -1,10 +1,17 @@
 .wraper {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.bg-step1 {
-  background-image: url(../images/bg-step1.png);
+#form-info {
+  width: 60%;
+  margin-top: 100px;
+}
+.bg-step2 {
+  background-image: url(../images/bg-form.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,3 +24,37 @@
   bottom: 25px;
   left: 54px;
 }
+
+.warning-form {
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  margin: 8px 24px 24px 24px;
+}
+/* input upload  */
+.filupp-file-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.file-upp > div > input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.ic-camera {
+  padding-right: 20px;
+}
+/* close input upload */
