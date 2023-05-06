@@ -1,0 +1,19 @@
+.wraper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.bg-step1 {
+  background-image: url(../images/bg-step1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.btn-logout {
+  position: absolute;
+  width: 40px;
+  height: 48px;
+  bottom: 25px;
+  left: 54px;
+}

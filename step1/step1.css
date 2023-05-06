@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 .bg-step1 {
-  background-image: url(./images/bg-step1.png);
+  background-image: url(../images/bg-step1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
